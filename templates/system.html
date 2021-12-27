@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上海市垃圾分类系统</title>
+<script type="text/javascript" src="../static/js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery.SuperSlide.2.1.js"></script>
+<script src="../static/js/vector.js"></script>
+<link href="../static/css/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="container">
+<div id="output"></div>
+<div class="banner">
+
+	<ul>
+		<li>
+			<div class="tpbox">
+				<a  href="/search" class="tpnr"><img src="../static/images/f1.png"><span>信息查询展示</span></a>
+					<div class="text"_>
+						<p>提供基于日期和站点的垃圾查询与展示</p>
+					</div>
+			</div>
+		</li>
+		<li>
+			<div class="tpbox">
+				<a href="/delete"  class="tpnr"><img src="../static/images/f4.png"><span>信息清理删除</span></a>
+				<div class="text"_>
+						<p>从数据库中清理不需要垃圾加速查询速度</p>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="tpbox">
+				<a href="/add"  class="tpnr"><img src="../static/images/f3.png"><span>信息修改添加</span></a>
+					<div class="text"_>
+						<p>垃圾信息的纠错与添加提高数据库准确率</p>
+					</div>
+			</div>
+		</li>
+		<li>
+			<div class="tpbox">
+				<a href="" class="tpnr"><img src="../static/images/f2.png"><span>信息补全</span></a>
+					<div class="text"_>
+						<p>利用自研算法对缺失进行垃圾的自动补全</p>
+					</div>	
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+</div>
+<div id="header">
+	<div class="headerbox">
+		<div class="header_left"><h2>上海市垃圾分类</h2></div>
+		<div class="jeader_right">
+			<ul>
+				<li><a href="login" class="btn" >登录</a></li>
+<!--                <li><a href=""><img src="../static/images/dh.gif" /> 7X24小时服务电话：×××</a> &nbsp&nbsp&nbsp</li>-->
+<!--		        <li><a href=""><img src="../static/images/kf.gif" /> 售后客服QQ： ×××</a></li>-->
+<!--		        <li><a href=""><img src="../static/images/kf.gif" /> 售前客服QQ： ×××</a></li>-->
+		  </ul>
+            <ul>
+              <li><a href=""></a></li>
+              <li></li>
+            </ul>
+      </div>
+	</div>
+</div>
+
+<!--<div class="tbjlbox"></div>-->
+<!--<div class="cpgs">-->
+<!--  <div class="tcbox">-->
+<!--		<div class="tcbt">-->
+<!--			<h3>套餐价格</h3>-->
+<!--			<ul>-->
+<!--				<li>国内防护带宽</li>-->
+<!--				<li>海外防护带宽</li>-->
+<!--				<li>CC防护</li>-->
+<!--				<li>域名绑定数量</li>-->
+<!--				<li>防护IP</li>-->
+<!--				<li>盗链防护</li>-->
+<!--				<li>IP黑白名单</li>-->
+<!--				<li>访问端口</li>-->
+<!--				<li>页面压缩</li>-->
+<!--				<li>负载均衡</li>-->
+<!--				<li>泛解析</li>-->
+<!--				<li>智能缓存</li>-->
+<!--				<li>页面优化</li>-->
+<!--				<li>DDoS攻击实时数据</li>-->
+<!--				<li>Web连接实时信息</li>-->
+<!--				<li>访问统计</li>-->
+<!--				<li>加速统计</li>-->
+<!--				<li>安全统计</li>-->
+<!--				<li>电话及QQ/IM支持</li>-->
+<!--				<li>专属安全顾问</li>-->
+<!--				<li>抗攻击SLA</li>-->
+<!--				<li>解决方案设计</li>-->
+<!--			</ul>-->
+<!--		</div>-->
+<!--		<div class="tcnr">-->
+<!--			<h3>￥1800/月</h3>-->
+<!--			<ul>-->
+<!--				<li class="no1">100G</li>-->
+<!--				<li>50G</li>-->
+<!--				<li class="no1">10万/小时</li>-->
+<!--				<li>5个</li>-->
+<!--				<li class="no1">共享</li>-->
+<!--				<li>无</li>-->
+<!--				<li class="no1">有</li>-->
+<!--				<li>80</li>-->
+<!--				<li class="no1">无</li>-->
+<!--				<li>不支持</li>-->
+<!--				<li class="no1">不支持</li>-->
+<!--				<li>不支持</li>-->
+<!--				<li class="no1">不支持</li>-->
+<!--				<li>无</li>-->
+<!--				<li class="no1">实时</li>-->
+<!--				<li >有</li>-->
+<!--				<li class="no1">有</li>-->
+<!--				<li >有</li>-->
+<!--				<li class="no1">7*12</li>-->
+<!--				<li>无</li>-->
+<!--				<li class="no1">%90可用性，%10延迟</li>-->
+<!--				<li>无</li>-->
+<!--			</ul>-->
+<!--			<a href="">联系客服购买</a>-->
+<!--		</div>-->
+<!--		<div class="tcnr">-->
+<!--			<h3>3000/月</h3>-->
+<!--			<ul>-->
+<!--				<li class="no1">200G</li>-->
+<!--				<li>100G</li>-->
+<!--				<li class="no1">20万/小时</li>-->
+<!--				<li>10个</li>-->
+<!--				<li class="no1">共享</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">有</li>-->
+<!--				<li>支持非80</li>-->
+<!--				<li class="no1">有</li>-->
+<!--				<li>支持</li>-->
+<!--				<li class="no1">支持</li>-->
+<!--				<li>支持</li>-->
+<!--				<li class="no1">不支持</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">实时</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">有</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">7*24</li>-->
+<!--				<li>无</li>-->
+<!--				<li class="no1">%95可用性，%5延迟</li>-->
+<!--				<li>无</li>-->
+<!--			</ul>-->
+<!--			<a href="">联系客服购买</a>-->
+<!--		</div>-->
+<!--		<div class="tcnr">-->
+<!--			<h3>￥5000/月</h3>-->
+<!--				<ul>-->
+<!--					<li class="no1">300G</li>-->
+<!--					<li>200G</li>-->
+<!--					<li class="no1">50万/小时</li>-->
+<!--					<li>部分独享</li>-->
+<!--					<li class="no1">有</li>-->
+<!--					<li>有</li>-->
+<!--					<li class="no1">支持非80</li>-->
+<!--					<li>有</li>-->
+<!--					<li class="no1">20个</li>-->
+<!--					<li>支持</li>-->
+<!--					<li class="no1">支持</li>-->
+<!--					<li>支持深度缓存</li>-->
+<!--					<li class="no1">支持</li>-->
+<!--					<li>有</li>-->
+<!--					<li class="no1">实时</li>-->
+<!--					<li>有</li>-->
+<!--					<li class="no1">有</li>-->
+<!--					<li>有</li>-->
+<!--					<li  class="no1">7*24</li>-->
+<!--					<li>有</li>-->
+<!--					<li class="no1">%99可用性，%1延迟</li>-->
+<!--					<li>有</li>-->
+<!--				</ul>-->
+<!--				<a href="">联系客服购买</a>-->
+<!--		</div>-->
+<!--		<div class="tcnr">-->
+<!--			<h3>￥9000/月</h3>-->
+<!--			<ul>-->
+<!--				<li class="no1">500G</li>-->
+<!--				<li>500G</li>-->
+<!--				<li class="no1">100万/小时</li>-->
+<!--				<li>50个</li>-->
+<!--				<li class="no1">独享</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">有</li>-->
+<!--				<li>支持非80</li>-->
+<!--				<li class="no1">有</li>-->
+<!--				<li>支持</li>-->
+<!--				<li class="no1">支持</li>-->
+<!--				<li>支持深度缓存</li>-->
+<!--				<li class="no1">支持</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">实时</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">有</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">7*24</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">%99可用性，%1延迟</li>-->
+<!--				<li>有</li>-->
+<!--			</ul>-->
+<!--			<a href="">联系客服购买</a>-->
+<!--		</div>-->
+<!--		<div class="tcnr">-->
+<!--			<h3>￥18000/月</h3>-->
+<!--			<ul>-->
+<!--				<li class="no1">无限制</li>-->
+<!--				<li>无限制</li>-->
+<!--				<li class="no1">无限制</li>-->
+<!--				<li>100个</li>-->
+<!--				<li class="no1">独享</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">有</li>-->
+<!--				<li>支持非80</li>-->
+<!--				<li class="no1">有</li>-->
+<!--				<li>支持</li>-->
+<!--				<li class="no1">支持</li>-->
+<!--				<li>支持深度缓存</li>-->
+<!--				<li class="no1">支持</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">实时</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">有</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">7*24</li>-->
+<!--				<li>有</li>-->
+<!--				<li class="no1">%99可用性，%1延迟</li>-->
+<!--				<li>有</li>-->
+<!--			</ul>-->
+<!--			<a href="">联系客服购买</a>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</div>-->
+<!--<div class="cpgs">-->
+<!--	<h2>产品概述</h2>-->
+<!--	<div class="cpgs_nr">-->
+<!--		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bgxgys1">-->
+<!--		  <tr>-->
+<!--		    <td width="17%"><img src="../static/images/tb1qmvokxxxxxbwxfxxxxxxxxxx-32-32.png" />DDoS高防IP</td>-->
+<!--		    <td width="83%">	高防CDNDDoS高防IP是针对互联网服务器（任何地区服务器及云主机）在遭受大流量的DDoS攻击后导致服务不可用的情况下，用户可以通过购买高防IP，将攻击流量引流到高防IP，确保源站的稳定可靠。</td>-->
+<!--		  </tr>-->
+<!--		  <tr>-->
+<!--		    <td><img src="../static/images/tb1qmvokxxxxxbwxfxxxxxxxxxx-32-32.png" />海量DDoS清洗</td>-->
+<!--		    <td>支持电信、联通、移动、教育网等8线独家防御DDoS集群1000G+防御， 线上单线最高支持400G单节点防御优质骨干网接入，全国延迟到原服务器小于30ms</td>-->
+<!--		  </tr>-->
+<!--		  <tr>-->
+<!--		    <td><img src="../static/images/tb1t1gnkxxxxxcjxvxxxxxxxxxx-32-32.png" />全业务支持</td>-->
+<!--		    <td>支持TCP/UDP/HTTP/HTTPS适合金融、电商、菠菜、门户、媒体等各类业务场景支持DDoS,CC,WAF</td>-->
+<!--		  </tr>-->
+<!--		  <tr>-->
+<!--		    <td><img src="../static/images/tb1t1gnkxxxxxcjxvxxxxxxxxxx-32-32.png" />HTTPS加密</td>-->
+<!--		    <td>	支持HTTPS业务的DDoS、CC、WAF防御HTTPS全链路加密（回源链路也加密）支持HTTPS私钥独享解决方案</td>-->
+<!--		  </tr>-->
+<!--		  <tr>-->
+<!--		    <td><img src="../static/images/tb1bguykxxxxxc6xfxxxxxxxxxx-32-32.png" />业界领先防御算法</td>-->
+<!--		    <td>防御菠菜空连接、慢连接、恶意踢人攻击采用IP信誉库、ip+cookie、ip+key防御CC攻击全球僵尸网络库、神盾局攻击溯源防御SQL注入、XSS、跨站攻击</td>-->
+<!--		  </tr>-->
+<!--		</table>-->
+
+<!--	</div>-->
+<!--</div>-->
+<!--<div class="cpgs">-->
+<!--	<h2>合作伙伴</h2>-->
+<!--    <div class="hzhb_box">-->
+<!--    	<ul>-->
+<!--    		<li><a href="http://www.dmaku.com"><img src="../static/images/home_partner_aws_c3d7295.png"/></a></li>-->
+<!--    		<li><a href="http://www.dmaku.com"><img src="../static/images/home_partner_dns_eee3472.png"/></a></li>-->
+<!--    		<li><a href="http://www.dmaku.com"><img src="../static/images/home_partner_baidukaifang_3aa312b.png"/></a></li>-->
+<!--    		<li><a href="http://www.dmaku.com"><img src="images/home_partner_dog_9320df2.png"/></a></li>-->
+<!--    		<li><a href="http://www.dmaku.com"></a><img src="../static/images/home_partner_gds_0a074cb.png"/></li>-->
+<!--    		<li><a href="http://www.dmaku.com"></a><img src="../static/images/home_partner_huawei_5b1f75e.png"/></li>-->
+<!--    		<li><a href="http://www.dmaku.com"></a><img src="../static/images/home_partner_jinshan_8e6e3d5.png"/></li>-->
+<!--    		<li><a href="http://www.dmaku.com"></a><img src="../static/images/home_partner_weike_9b4a8e1.png"/></li>-->
+<!--    		<li><a href="http://www.dmaku.com"><img src="../static/images/home_partner_wuyun_f584466.png"/></a></li>-->
+<!--    		<li><a href="http://www.dmaku.com"><img src="../static/images/home_partner_xiaomi_d8ba504.png"/></a></li>-->
+<!--    	</ul>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div id="footer">-->
+<!--</div>-->
+
+<script>
+$(function(){
+	var victor = new Victor("container", "output");
+	var theme = [
+			["#002c4a", "#005584"],
+			["#35ac03", "#3f4303"],
+			["#ac0908", "#cd5726"],
+			["#18bbff", "#00486b"]
+		]
+	$(".color li").each(function(index, val) {
+		var color = theme[index];
+		 $(this).mouseover(function(){
+			victor(color).set();
+		 })
+	});
+	var height = $("#container").height();
+	var thisheight = $(".banner").height();
+	var zong = parseInt(height-thisheight)/2;	
+	$(".banner").css({'top':zong+30});
+	$(".tbjlbox").css({'padding-top':$("#container").height()});
+});
+
+$(window).resize(function () { 
+	var height = $("#container").height();
+	var thisheight = $(".banner").height();
+	var zong = parseInt(height-thisheight)/2;	
+	$(".banner").css({'top':zong+30});
+	$(".tbjlbox").css({'padding-top':height});
+})
+</script>
+
+</body>
+</html>

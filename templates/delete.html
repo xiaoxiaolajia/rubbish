@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <link rel="stylesheet" type="text/css" href="../static/css/login.css" />
+
+	</head>
+	<body>
+		a = 0
+		<script>
+			{% if messages %}
+				{% for msg in messages %}
+					alert('{{ msg }}');
+				{% endfor %}
+				window.location.href='/system';
+			{% endif %}
+		</script>
+			<div class="login-box">
+			<h2>请输入删除条件</h2>
+			<form action="/dodelete">
+                <div class="login-field">
+					<input type="text" name="address" />
+					<label >请输入删除的垃圾站点</label>
+				</div>
+				<div class="login-field">
+					<input type="datetime-local" value="2021-01-01T05:09:00" name="start" required="" />
+					<label>请选择删除开始时间</label>
+				</div>
+				<div class="login-field">
+					<input type="datetime-local" value="2021-01-01T05:10:00" name="end" required="" />
+					<label >请选择删除结束时间</label>
+				</div>
+                <div class="login-field">
+                    <input name="garabtype" type="text" list="slist">
+                    <datalist id="slist">
+                        <option>干垃圾</option>
+                        <option>湿垃圾</option>
+                        <option>餐厨垃圾</option>
+                        <option>厨余垃圾</option>
+                    </datalist>
+					<label >请选择删除的垃圾类型</label>
+				</div>
+				<button type="submit">确认删除</button>
+			</form>
+		</div>
+	</body>
+</html>

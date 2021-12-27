@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <link rel="stylesheet" type="text/css" href="../static/css/login.css" />
+
+	</head>
+	<body>
+		a = 0
+		<script>
+			{% if messages %}
+				{% for msg in messages %}
+					alert('{{ msg }}');
+				{% endfor %}
+				window.location.href='/system';
+			{% endif %}
+		</script>
+			<div class="login-box">
+			<h2>请输入添加条件</h2>
+			<form action="/doadd">
+                <div class="login-field">
+					<input type="text" name="address" />
+					<label >请输入添加的垃圾站点</label>
+				</div>
+				<div class="login-field">
+					<input type="datetime-local" value="2021-01-01T05:09:00" name="time" required="" />
+					<label>请选择添加时间</label>
+				</div>
+                <div class="login-field">
+                    <input name="garabtype" type="text" list="slist">
+                    <datalist id="slist">
+                        <option>干垃圾</option>
+                        <option>湿垃圾</option>
+                        <option>餐厨垃圾</option>
+                        <option>厨余垃圾</option>
+                    </datalist>
+					<label >请选择添加垃圾类型</label>
+				</div>
+                <div class="login-field">
+					<input type="text" name="weight" required="" />
+					<label>请选择垃圾重量</label>
+				</div>
+                <div class="login-field">
+					<input type="text" name="carno" required="" />
+					<label>请输入车牌号</label>
+				</div>
+				<button type="submit">确认添加</button>
+			</form>
+		</div>
+	</body>
+</html>
