@@ -31,19 +31,28 @@ def dosearch(request):
     s = datetime.fromisoformat(startTime)
     e = datetime.fromisoformat(endTime)
     # print(s, e)
-    lengan = ModelObjEnvinterface.objects.filter(readtime__gte=datetime(s.year, s.month, s.day, s.hour, s.minute, s.second),
+    gan = ModelObjEnvinterface.objects.filter(readtime__gte=datetime(s.year, s.month, s.day, s.hour, s.minute, s.second),
                                                readtime__lte=datetime(e.year, e.month, e.day, e.hour, e.minute, e.second),
-                                               garabtype='干垃圾').count()
-    lengshi = ModelObjEnvinterface.objects.filter(readtime__gte=datetime(s.year, s.month, s.day, s.hour, s.minute, s.second),
+                                               garabtype='干垃圾')
+    shi = ModelObjEnvinterface.objects.filter(readtime__gte=datetime(s.year, s.month, s.day, s.hour, s.minute, s.second),
                                                readtime__lte=datetime(e.year, e.month, e.day, e.hour, e.minute, e.second),
-                                               garabtype='湿垃圾').count()
-    lencanchu = ModelObjEnvinterface.objects.filter(readtime__gte=datetime(s.year, s.month, s.day, s.hour, s.minute, s.second),
+                                               garabtype='湿垃圾')
+    canchu = ModelObjEnvinterface.objects.filter(readtime__gte=datetime(s.year, s.month, s.day, s.hour, s.minute, s.second),
                                                readtime__lte=datetime(e.year, e.month, e.day, e.hour, e.minute, e.second),
-                                               garabtype='餐厨垃圾').count()
-    lenchuyu = ModelObjEnvinterface.objects.filter(readtime__gte=datetime(s.year, s.month, s.day, s.hour, s.minute, s.second),
+                                               garabtype='餐厨垃圾')
+    chuyu = ModelObjEnvinterface.objects.filter(readtime__gte=datetime(s.year, s.month, s.day, s.hour, s.minute, s.second),
                                                readtime__lte=datetime(e.year, e.month, e.day, e.hour, e.minute, e.second),
-                                               garabtype='厨余垃圾').count()
+                                               garabtype='厨余垃圾')
     # print(lengan, lengshi, lencanchu, lenchuyu)
+    lengan, lengshi, lencanchu, lenchuyu = 0, 0, 0, 0
+    for g in gan:
+        lengan += g.loadweight
+    for s in shi:
+        lengshi += s.loadweight
+    for can in canchu:
+        lencanchu += can.loadweight
+    for chu in chuyu:
+        lenchuyu += chu.loadweight
 
     garabtypes = ['干垃圾', '湿垃圾', '厨余垃圾', '餐厨垃圾']
     counts = [lengan, lengshi, lencanchu, lenchuyu]
