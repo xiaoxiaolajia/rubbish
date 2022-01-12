@@ -45,6 +45,7 @@ def dosearch(request):
                                                garabtype='厨余垃圾')
     # print(lengan, lengshi, lencanchu, lenchuyu)
     lengan, lengshi, lencanchu, lenchuyu = 0, 0, 0, 0
+    # [2745507, 23851011, 550015, 0]
     for g in gan:
         lengan += g.loadweight
     for s in shi:
