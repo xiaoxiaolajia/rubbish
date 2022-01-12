@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <link rel="stylesheet" type="text/css" href="../static/css/login.css" />
+
+	</head>
+	<body>
+			<div class="login-box">
+			<h2>请检索</h2>
+			<form action="/docomplete">
+				<div class="login-field">
+<!--                    请选择开始时间-->
+                    <input type="hidden"/>
+					<input type="date" value="2021-01-01" name="start" required="" />
+					<label>请选择开始时间</label>
+				</div>
+				<div class="login-field">
+					<input type="date" value="2021-05-01" name="end" required="" />
+					<label >请选择结束时间</label>
+				</div>
+                <div class="login-field">
+					<input type="text" name="address" required="" />
+					<label >请输入垃圾站点</label>
+				</div>
+				<div class="login-field">
+					<input type="text" name="garabtype" required="" />
+					<label >请输入垃圾类型</label>
+				</div>
+				<button type="submit">确认查询</button>
+			</form>
+		</div>
+
+
+
+	</body>
+</html>

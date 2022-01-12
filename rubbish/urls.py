@@ -29,5 +29,7 @@ urlpatterns = [
     path('system/', views.system),
     path('add/', views.add),
     path('doadd/', views.doadd),
+    path('complete/', views.complete),
+    path('docomplete/', views.docomplete),
     url(r'^$', views.login)
 ]

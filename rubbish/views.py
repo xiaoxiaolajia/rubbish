@@ -5,7 +5,10 @@ from django.contrib import messages
 import time
 import model
 import string
-from datetime import datetime
+from datetime import datetime, date
+import random
+import datetime as dt
+import numpy as np
 def hello(request):
     context  = {}
     context['hello'] = 'Hello World!'
@@ -99,6 +102,52 @@ def doadd(request):
     else:
         messages.add_message(request, messages.SUCCESS, "数据添加成功！")
     return render(request, 'add.html', locals())
+
+def complete(request):
+    return render(request, 'complete.html', locals())
+
+def docomplete(request):
+    startTime = request.GET.get('start')
+    endTime = request.GET.get('end')
+    address = request.GET.get('address')
+    grabtype = request.GET.get('garabtype')
+    s = datetime.fromisoformat(startTime)
+    e = datetime.fromisoformat(endTime)
+    print(s, e)
+    res = 0
+    try:
+        res = ModelObjEnvinterface.objects.filter(readtime__gte=datetime(s.year, s.month, s.day, s.hour, s.minute, s.second),
+                                               readtime__lte=datetime(e.year, e.month, e.day, e.hour, e.minute, e.second),
+                                               garabtype=grabtype, address=address)
+    except:
+        messages.add_message(request, messages.ERROR, '抱歉，数据查询失败。')
+    else:
+        messages.add_message(request, messages.SUCCESS, "数据查询成功！")
+    s1 = s.date()
+    e1 = e.date()
+    dayrange = list()
+    map, map1 = dict(), dict()
+    vals = list()
+    for i in range ((e1 - s1).days + 1):
+        day = s1 + dt.timedelta(days=i)
+        map[day] = 0
+        # dayrange.append(day)
+    # print(dayrange)
+    # laji = [0]*len(dayrange)
+
+    lendict = len(map)
+    for r in res:
+        map[r.readtime.date()] += r.loadweight
+    for val in map.values():
+        if val != 0:
+            vals.append(val)
+    for key in map:
+        if map[key] != 0:
+            map1[key] = map[key]
+        else:
+            map1[key] = vals[random.randint(0, len(vals) - 1)]
+    # print(map)
+    return render(request, 'showcomplete.html', locals())
 
 
 def system(request):

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+    <title>垃圾分类展示界面</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="/static/js/echarts.min.js"></script>
+</head>
+
+<body style="height: 100%; margin: 0">
+    <h1 align="center">数据补全展示</h1>
+    <!-- <div id="chart"></div> -->
+    <div id="container" style="height: 80%"></div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+
+
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom);
+        var app = {};
+        var ys = [];
+        var ys1 = [];
+        var xs = [];
+        {% for key in map %}
+            xs.push("{{ key }}")
+        {% endfor %}
+        {% for val in map.values %}
+            ys.push("{{ val }}")
+        {% endfor %}
+         {% for val in map1.values %}
+            ys1.push("{{ val }}")
+        {% endfor %}
+        //console.log(xs)
+        // console.log(ys)
+        var option;
+
+        option = {
+            legend: {
+              data: ['补全前', '补全后']
+            },
+            xAxis: {
+                type: 'category',
+                 //data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                data: xs
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                     //data: [120, 200, 150, 80, 70, 110, 130],
+                    name: "补全前",
+                    data: ys,
+                    type: 'line',
+                    smooth: true
+                },
+                {
+                  name: '补全后',
+                  type: 'line',
+                  stack: 'Total',
+                  data: ys1,
+                  smooth: true
+                }
+            ]
+        };
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+    </script>
+</body>
+
+</html>
